@@ -23,11 +23,12 @@ map.add(layer);
 view.whenLayerView(layer).then(() => {
   view.goTo(layer.fullExtent);
 
+  console.info('layer url', { url: layer.url });
   return layer.findSublayerById(0).load();
 }).then(() => {
   const sublayer = layer.findSublayerById(0);
 
-  console.info({
+  console.info('sublayer details', {
     title: sublayer.title,
     // fields are empty
     fields: sublayer.fields,
