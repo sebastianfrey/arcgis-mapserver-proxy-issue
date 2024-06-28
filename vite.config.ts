@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
+
 // vite.config.js
 export default defineConfig({
+  appType: 'mpa',
   server: {
     proxy: {
       "/Census": {
